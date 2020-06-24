@@ -1,3 +1,5 @@
+#include <iostream>
+using namespace std;
 unsigned int strLen(const char* str) 
 { 
  const char* temp = str; 
@@ -67,4 +69,6 @@ void strToLower(char* str)
    str[i] += offset; 
   } 
  } 
+}
+return 0;
 }
