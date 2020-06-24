@@ -1,0 +1,70 @@
+unsigned int strLen(const char* str) 
+{ 
+ const char* temp = str; 
+ while (*temp++); 
+ 
+ return temp - str - 1; 
+ 
+ 
+} 
+void strCpy(char* dest, const char* source) 
+{ 
+ unsigned int len = strLen(source); 
+ for (int i = 0; i <= len; i++) 
+ { 
+  dest[i] = source[i]; 
+ } 
+ 
+} 
+ 
+} 
+void strCat(char* dest, const char* source) 
+{ 
+ unsigned int len = strLen(source); 
+ unsigned int len1 = strLen(dest); 
+ for (int i = 0; i <= len; i++) 
+ { 
+  dest[len1++] = source[i]; 
+ } 
+ 
+} 
+ 
+ 
+} 
+void strReverse(char* str) 
+{ 
+ 
+ unsigned int len = strLen(str); 
+ for (int i = 0; i < len / 2; i++) 
+ { 
+ 
+  int x = str[len - i - 1]; 
+  str[len - i - 1] = str[i]; 
+  str[i] = x; 
+ } 
+} 
+ 
+ 
+void strToUpper(char* str) 
+{ 
+ unsigned int len = strLen(str); 
+ for (int i = 0; i < len; i++) 
+ { 
+  if (str[i] >= 'a' && str[i] <= 'z') 
+  { 
+   str[i] -= offset; 
+  } 
+ } 
+} 
+ 
+void strToLower(char* str) 
+{ 
+ unsigned int len = strLen(str); 
+ for (int i = 0; i < len; i++) 
+ { 
+  if (str[i] >= 'A' && str[i] <= 'Z') 
+  { 
+   str[i] += offset; 
+  } 
+ } 
+}
